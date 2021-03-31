@@ -1,0 +1,22 @@
+puts "金額を入力してください"
+bill = gets.to_i
+puts "割り勘する人数を入力してください"
+number = gets.to_i
+
+begin
+    warikan = bill / number
+    puts "１人あたり#{warikan}円です"
+rescue ZeroDivisionError
+    #ZeroDivisionError例外が発生したらメッセージを表示する
+    puts "おっと、０人では割り勘できません"
+end
+
+def warikan(bill, number)
+    #例外処理を使わずに事前に分母の値をチェックする
+    if number.zero?
+        puts "おっと、０人では割り勘できません"
+        return
+    end
+    warikan = bill / number
+    puts "１人あたり#{warikan}円です"
+end
