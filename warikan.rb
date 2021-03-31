@@ -18,5 +18,5 @@ def warikan(bill, number)
         return
     end
     warikan = bill / number
-    puts "１人あたり#{warikan}円です"
+    puts "１人あたり#{warikan}円です！"
 end
